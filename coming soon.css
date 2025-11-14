@@ -1,0 +1,81 @@
+/* ---------- COMING SOON PAGE ---------- */
+
+.coming-body {
+  background: linear-gradient(120deg, var(--primary), var(--accent));
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--light);
+  text-align: center;
+  padding: 20px;
+}
+
+.coming-wrapper {
+  max-width: 650px;
+  animation: fadeIn 1.2s ease;
+}
+
+.coming-logo {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--highlight);
+  margin-bottom: 10px;
+}
+
+.coming-title {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.coming-text {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+.coming-timer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.time-box {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px 20px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  min-width: 80px;
+}
+
+.coming-btn {
+  background: var(--highlight);
+  color: var(--primary);
+  padding: 12px 32px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.coming-btn:hover {
+  background: var(--light);
+  transform: translateY(-4px);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .coming-title { font-size: 24px; }
+  .coming-text { font-size: 14px; }
+  .time-box { font-size: 16px; }
+}

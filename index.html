@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechYug – Coming Soon</title>
+  <link rel="stylesheet" href="/css/coming soon.css">
+</head>
+
+<body class="coming-body">
+
+  <div class="coming-wrapper">
+    <h1 class="coming-logo">TechYug</h1>
+
+    <h2 class="coming-title">We Are Launching Soon 🚀</h2>
+    <p class="coming-text">Our amazing website is under construction. Stay tuned for something awesome!</p>
+
+    <div class="coming-timer">
+      <div class="time-box"><span id="days">00</span><br>Days</div>
+      <div class="time-box"><span id="hours">00</span><br>Hours</div>
+      <div class="time-box"><span id="minutes">00</span><br>Minutes</div>
+      <div class="time-box"><span id="seconds">00</span><br>Seconds</div>
+    </div>
+
+    <button class="coming-btn">Notify Me</button>
+  </div>
+
+  <script>
+    const launchDate = new Date("Jan 1, 2026 00:00:00").getTime();
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const diff = launchDate - now;
+
+      document.getElementById("days").innerText = Math.floor(diff / (1000*60*60*24));
+      document.getElementById("hours").innerText = Math.floor((diff % (1000*60*60*24))/(1000*60*60));
+      document.getElementById("minutes").innerText = Math.floor((diff % (1000*60*60))/(1000*60));
+      document.getElementById("seconds").innerText = Math.floor((diff % (1000*60))/1000);
+    }, 1000);
+  </script>
+
+</body>
+</html>
